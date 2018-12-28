@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SlimOTA xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="ota.xsd">
+    <Official>
+        <s2>
+            <Filename>liquid_remix-10.0.3-20181222-OFFICIAL-s2.zip</Filename>
+            <RomUrl
+                id="rom"
+                title="LiquidRemix"
+                description="Download latest build for s2">https://sourceforge.net/projects/liquid-remix/files/s2/liquid_remix-10.0.3-20181222-OFFICIAL-s2.zip/download</RomUrl>
+                id="changelog"
+            <ChangelogUrl
+                title="Changelog"
+                description="Click here to view latest changes">https://github.com/renjian2/LROTA/blob/pie/Changelog.txt</ChangelogUrl>
+            <OpenGappsUrl
+            	id="open_gapps"
+            	title="OpenGApps"
+            	description="Download latest OpenGApps for Android Oreo">https://opengapps.org</OpenGappsUrl>
+            <TelegramGroupUrl
+                id="telegram_group"
+                title="TelegramGroup"
+                description="Join Telegram For Support regarding features and bug fixes">https://t.me/LiquidRemixChat</TelegramGroupUrl>
+	    <MagiskUrl
+                id="magisk"
+                title="StableMagisk"
+                description="Download latest magisk zip for root">https://forum.xda-developers.com/apps/magisk</MagiskUrl>
+             <DonationUrl
+                id="donate"
+                title="Donate"
+                description="Like my work?Click here, to buy me a coffee then :D">http://paypal.me/itsdednibba</DonationUrl>
+        </s2>
+    </Official>
+</SlimOTA>
