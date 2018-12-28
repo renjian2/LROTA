@@ -1,0 +1,330 @@
+=======================
+     12-28-2018
+=======================
+
+
+   * device/leeco/s2/
+f1aa8d4 s2: camera: HAL3: Error occurs while unmapping buffer
+6054f94 s2: camera: HAL3: Return Error For Unsupported Stream Format
+3d6f422 s2: Enable h/w memory tuning
+8de9ddc s2: prop: update some Radio props
+a1d44bb s2: init.qcom.rc: Increase the maximum size for socket receive buffer
+6ee6ab5 s2: Add props for GCam
+95f8134 s2: Binderize camera and composer hidl hal
+228784c s2: Update props to enable WFD
+30bf2b2 s2: build libnl
+8d10631 s2: wfd: enable PRODUCT_BOOT_JAR
+536df98 s2: wfd: adding entry for vendor interface
+3d0d1e5 s2: add WFD blobs
+ee6e120 Officail LRD
+
+=======================
+     12-27-2018
+=======================
+
+
+=======================
+     12-26-2018
+=======================
+
+
+=======================
+     12-25-2018
+=======================
+
+
+=======================
+     12-24-2018
+=======================
+
+
+   * device/leeco/s2/
+538715c s2: sepolicy: Fix compiler errors
+b908a99 Revert "s2: overlay: Kang marlin brightness configuration"
+
+=======================
+     12-23-2018
+=======================
+
+
+=======================
+     12-22-2018
+=======================
+
+
+   * bionic/
+08f4693 libc fortify: Ignore open() O_TMPFILE mode bits warning
+
+   * frameworks/base/
+f439a01 Fix Signature Spoofing
+34c94c7 KeyguardHostView: Auto face unlock v2 for pie
+e0bd232 FontService: Update privapp-permissions-platform.xml
+195088f base: FontService: Add a error for non-supported font packages
+4037aa4 telephony: Make IMS method updateToState accessible
+d196dfb DreamBackend: Fix launching settings
+e8c85ef systemui: fix liquid logo hide animation
+ac230c4 Update the screenState for keyguard while screen turning on
+00dda24 Delete the check of mService when BluetoothHeadset doUnbind
+75aeabc Make services with uid 1000 restart if their host process crashes
+bff0f3c ConnectionRecord: make SystemProcess Watchdog when clean app process
+341579f Change the listening logic of MtpStorageManager
+4a52eb5 Fix motion event offset of DecorView is moved in the window
+11739f0 BoostFramework: Add debug to hide logcat spam on devices without QPerformance
+4749d35 SystemUI: allow devices override audio panel location [1/2]
+f4e8752 extended audio panel [1/2]
+328965e Telephony: NPE observed in Settings when click on Search settings
+e0fecb0 Fix showing empty signal strength for TD-SCDMA
+f2b7291 Fix property setting with failure
+003f7c0 frameworks/base: Add HDMI hotplug handling
+ee22da8 Check if EIMS when confirming network
+0a6b86b net: modify connecitvity rematch logic to support MSIM devices
+3e2a7fe base: fix mediascanner access permissions to external storage
+e85bffa BoostFramework: silence exception about class not found
+a2dc426 Modify game detection logic
+956dbc5 Add perfGetFeedback api support from framework
+f51b2ce Re-Enable Burn-In Controllers for NavBar
+81d30b9 Fix Pie NavBar Full Gestures.
+1cfdaa3 Full nav gesture: Poor Hack to Get Everything working
+75ef7ce base: Keyguard: Hide check button when using PIN quick unlock
+d419474 Increase LongPress Timeout
+b1a0b82 Revert "aapt: Default to 0 compression ratio"
+1fdb3be Select the proper request list size
+d58e151 SystemUI: Fix IllegalArgumentException when SystemUI do dumping
+6bbdf14 Avoid NPE in resumeTopActivityInnerLocked()
+624cbd2 Fix Framework Reboot due to invalid display
+fb79b2f SystemUI: fix notification overlap with PIN screen
+3c9cec6 ResourceManager: Disable APK Assets cache
+c664718 BoostFramework: Implement asynchronous processing of perflocks
+ae88225 SmartNav: Update Kill App action
+30a8db8 PanelPorn 8.1: Power menu alpha and dim (1/2)
+25878d9 base: Add special captive portal servers for chinese
+27bfbe1 Support the perflock request from system/priv apps whose domain are untrusted
+9409d56 Add Game boost & modify launchboostv2 invocation.
+c1c6f5d Disable swipe boost and preferred apps for certain cases
+78521c0 Fling/Pre-fling Boost: Call perf boost from System Server context
+7db1bde BoostFramework: Clean up code
+670a9a1 IOP : Adding support for UXPerf Class
+15eb4f4 BoostFramework: Move property checks to pass sepolicy requirements.
+710ef44 IOP/UXE: This change is to enable the IOP and UXE
+4e07425 Precise new activity boost.
+682263c Reorder boosts for quick ramp up
+8cf0983 Add perf hint for screen rotation animation
+953c1a4 Add perf hint for rotation latency
+5f6df42 framework/base: add parallel verifyV1
+0a84a4e add perf_service into system_process.
+337f8c6 BoostFramework: To Enhance performance.
+9a33393 Lockscreen Visualizer: Check for keyguard fading away
+1305820 Fixes for lockscreen visualizer
+8d5e9ad Record screen in high quality
+c5f6b58 Battery charge warning [1/2]
+a682475 Add Option to Enable/Disable ScreenShot & ScreenRecord Shortcut [1/2]
+94f527b Clean up reloading assets on overlay change
+f683152 Notifications: Do not use theme context for remote views
+490203d Improvements in loading notifications with dark mode
+5dd5087 Reload more assets on overlay change
+7215124 Support for appending "standalone" WHERE chunks
+0d58255 Bind update() args as Object[] for performance
+7b80636 Extend SQLiteQueryBuilder for update and delete
+14f0805 Execute "strict" queries with extra parentheses
+f231540 Revert SQLiteQueryBuilder for now
+610e0c4 Execute "strict" queries with extra parentheses
+7ef5581 Add support for appending standalone phrases
+14636a0 GROUP BY and HAVING aren't ready to be strict
+e3170c9 Extend SQLiteQueryBuilder for update and delete
+2780e00 Revert "Frameworks/base: Compiled-classes support"
+a892993 Fix ExifInterface for .heic when meta is at the end
+d1a48fa LockscreenVisualizer: Use offload thread
+3c8ff78 FontService: fix null object reference
+fdb6277 Statusbar clock and icon fixes
+ac48126 CollapsedStatusbar: Fix phantom spaces in status bar
+9694f1e fwb: disable Aggressive trim settings by default
+48baab9 Smartbar pixel animation: Ability to customize the dots [1/3]
+17ba337 Smarbar Pixel Navbar Animation Duration Settings [1/3]
+f7bb133 Option to use accent color for pulse [2/3]
+09a8d5f Revert "Introduce Ambient Indication Interface"
+0119296 Revert "Ambient Play: Do nothing while we're offline."
+
+=======================
+     12-21-2018
+=======================
+
+
+=======================
+     12-20-2018
+=======================
+
+
+   * build/make/
+39596df soong_config: Allow extension of valid gralloc 1.0 buffer usage bits
+de1b7d8 Revert "Build: Support for compiled-classes file"
+
+   * build/soong/
+3b8f983 Gralloc2: Allow invalid usage bits
+
+   * frameworks/av/
+b62269e libmedia: Add 1440p camcorder quality
+8707895 mediascanner: Accept .opus file extension.
+f5f4023 libstagefright: Allow HFR-60 in HAL-3 recording
+cb21a7c stagefrightrecorder: don't modify timeOffset in surface source case
+4146509 Camera: Add support for manual 3A.
+8952e45 CamcorderProfiles: Add new camcorder profiles
+d4b551f libcameraservice: Don't pass NULL args on setCallbacks call
+bb4d19c CameraService: Fix deadlock in binder death cleanup.
+adade94 Camera: Skip stream size check for whitelisted apps.
+2de7efe Tuning of Binder buffer for various HALs
+5c11341 Audio: Set Deep Buffer flag for music stream.
+2a4d9af audiopolicy: reset capture state when input is closed
+ee7caa5 audio: add support to enable track offload using direct output
+
+   * frameworks/native/
+e36183a gralloc2: Extend the list of valid gralloc bits
+89ea6a5 Gralloc2: Mark some gralloc bits as valid
+f792978 sf: Add support for multiple displays
+
+=======================
+     12-19-2018
+=======================
+
+
+   * device/leeco/s2/
+001f6b6 s2: rootdir: set zram swappiness to 80
+9b09a72 s2: prop: Enable QCRIL radio power saving
+ce1c4a2 s2: rootdir: Give /dev/msm_vidc_* camera group and video_device label
+396cb93 s2: time_daemon: use /persist to store offset to RTC
+39b3a29 s2: Reserve 128MB for critical system components.
+2d1c854 s2: rootdir: Remove length from userdata
+4db239d s2: Update prefix of hwcomposer service
+549463d s2: Increase the TCP buffer size to 6MB
+931cfe4 s2: prop: set wifi.direct.interface
+938d7e9 s2: init: Resolve kernel trace_marker permissions on post-fs
+f5d6bbe s2: amplifier: Use generated kernel headers
+7f33bd6 s2: overlay: Ignore RSSNR signal level
+9882f2a s2: init: Resolve vendor HALs for early bootanimation start
+ecb2635 s2: start bootanim before mounting data partition
+5fc5125 s2: use configstore 1.1
+0a9d18f s2: Swap disk creation
+a96544f s2: rootdir: remove interaction lock when idle
+6170b3d s2: remove wcnss_filter
+f4517d8 s2: Remove unused packages from qti_whitelist
+76a1457 s2: Don't rely on transitively included headers
+b4f1433 s2: Remove unwanted WiFi packages
+907c8df s2: enable cpuidle during boot
+cf0146e s2: Update CarrierConfig overlays
+000b3fb s2: Change zram swap size and swappiness
+f2608e8 s2: Kang qti-telephony-common.jar from daisy
+d1a868b s2: fix derp * drm hal is still 1.0
+3e7024f s2: passthrough hals
+394757e s2: QCamera2: HAL: Fix CTS CameraDeviceTest issues
+8c8cd65 s2: camera: QCamera2:mm-camera-channel:Added check for max value of cur_capture_idx.
+03b78c2 s2: camera: Update jpeg thumbnail sizes entries
+18672da s2: overlay: added some overlays for coloured notification/battery led
+c916f9d s2: remove lineage stuffs
+76a5c0b LiquidRemix
+6dced91 s2: Remove btnvtool *init: cannot find '/vendor/bin/btnvtool', disabling 'config_bt_addr': No such file or directory
+247e0cd s2: Added h/w keys and backlight stuffs * remove unneeded overlay-lineage
+2f448b8 s2: Regenerate thermal config * ./thermal-engine -o > thermal-engine-srtphone.conf * Since we are using thermal-engine binary from SRT phone it tries to load thermal-engine-srtphone.conf and fails. So copy the thermal config to appropriate dirs
+c89af53 s2: Shorten wait time to optimize shutdown time
+5dac387 s2: Build ClearKey HIDL plugin from source
+402c14a s2: move widevine,clearkey to v1.1 as required by Android P
+734405b s2: overlay: add audio related features
+322c645 s2: add system property to set AudioFlinger client heap size
+e618eeb s2 : Convert to binderized IR hal
+76090c2 s2: Use MIUI poweroff charging animation
+5aa4ade s2: Nuke Interation boost
+443becc s2: Enable ZRAM with LZ4 compression
+8266547 s2: Update system properties
+dc13b68 s2: shim missing symbols for ims * E ims_media_jni: Error loading library lib-imsvt.so: dlopen failed: cannot locate symbol _ZN7android5FenceD1Ev referenced by /system/lib64/lib-imsvideocodec.so... * remove unused shims
+918f376 s2: configs: update gps configs from Mi A2
+d7a4c75 s2: Update ims symlink * ims.apk was moved to vendor
+ecfb275 s2: Use all cores during bootup dex compilation
+f1b7d7e s2: rootdir: Do not symlink sdcard legacy path
+78a80ec s2: camera: Use generated kernel headers
+c4c1f72 s2: data-ipa-cfg-mgr: Use generated kernel headers
+6ecdc10 s2: Pin HOME application
+614fd64 s2: ueventd.qcom.rc: set permissions of /dev/qce device
+cb23f61 s2: Remove power-off alarm stuff from init extension
+a3fa1bc s2: Use full path for FRP partition
+aa06279 s2: Set partitions for loop device.
+a534e1e s2: Update ims and imssettings apk from whyred
+658f4b7 s2:[DNM]:permissive
+eec4341 s2: Change for time service
+598d06e s2: Update manifest.xml * Move CNE to vendor for updated blobs
+614a2e5 s2: Build libloc_pla and libsensorndkbridge * Import libloc_pla source from oreo gps hal * F linker : CANNOT LINK EXECUTABLE /system/vendor/bin/loc_launcher: library libloc_pla.so not found * F linker : CANNOT LINK EXECUTABLE /system/vendor/bin/slim_daemon: library libsensorndkbridge.so not found
+88a6c12 s2: gps: update from LA.UM.7.2.r1-05300-sdm660.0
+71efd4a s2: Start loc_launcher as gps user
+10e16e2 s2: Moving location sockets from /data to /dev
+eb81a95 s2: Update blobs from jasmine * Fingerprint jasmine_sprout 9 PKQ1.180904.001 V10.0.1.0.PDIMIFJ release-keys * GPS * Bluetooth * CNE * DPM * Poweroff Alarm * Widevine * Time services
+986ff2b s2: Initial sepolicy
+aee72e1 s2: Add unpinning support to update-sha1sums.py script
+af67607 s2: Handle moved blobs in update-sha1sums.py script
+d1bba24 s2: Add script to update sha1sums of kanged blobs
+cdb6661 s2: Update Power Profile for P
+9632387 s2: overlay: Kang marlin brightness configuration
+a444af0 s2: PIN critical apps and system services that get swapped
+405493e s2: Update overlay to hide sRGB toggle
+302f746 Dynamics Processing Effect
+aa8c8ec s2: Migrate to audio V4
+22747b5 s2: Update textclassifier package name for P
+95e793d s2: Drop custom display flags
+d34cbf9 s2: Switch to 1.1 power HAL
+d617d8a s2: Doze: Add missing preference listeners
+3e5b339 s2: Doze: Drop useless SDK dependency
+81539f5 s2: Drop libbt-vendor
+25c1040 s2: Changing healthd version to 2.0
+26f9249 s2: rootdir: Create new directory for Bluetooth SoC dump
+6b8d870 s2: rootdir: Create QTI log dir in /data/vendor/ location with permissions
+3d9059a s2: Switch to common basic USB HAL
+d44b6bb s2: Adapt for local LineageHW java overlays
+ae7bb8e s2: restart preview after picture taken  * fixes hdr
+388284e s2: Do not explicitly include camera.device implementations
+3abc4b5 s2: camera: Add libgui as shared library
+01577af s2: cam: Build vendor version for libgui
+b4d7686 s2: camera: Resolve the problem of memory leaks in exception flow Resolve the memory leaks when doing alloc failed Test: Compiles and device boots up.
+f814487 s2: camera: Added LOCAL_VENDOR_MODULE to set output to vendor
+b7d9573 s2: camera: fix compilation errors with new HALs
+8ca1f9a s2: camera: Specify internal video devices to ignore by external provider
+7db9526 s2: Mark camera-related processes as API level 23.
+a683601 s2: Configure number of physical SIM slots
+2d1e0f6 s2: build textclassifier
+2441cd4 s2: ueventd: Don't modify permissions of /dev/hw_random
+dfefc38 s2: Switch to Soundtrigger 2.1 implementation implementation
+493ef79 s2: Use passthrough sensor hal
+016ba65 s2: remove sepolicy contexts
+277338a s2: use libhwui instead of libskia
+05a067d s2: wifi: move symlinks to vendor
+321bd78 s2: Import stock Dalvik heap overrides * no longer needed to import heap details from "phone-xxhdpi-3072-dalvik-heap.mk"
+f38e343 Goodix FP HAL: Be quiet!
+e5e3e20 s2: Drop deprecated fingerprintd service
+9f2f82a s2: do not cleanup unused fingerprints
+b710d6a s2: Rename biometrics hidl hal
+4053a03 s2: biometrics: fingerprint: add locking to default impl
+9997b41 s2: Update biometrics for pie
+4cd8be0 s2: data-ipa-cfg-mgr: Kernel Header Changes
+22e1d53 s2: libui: Allow additional gralloc 1.0 buffer usage bits
+3eac0ae s2: overlay: config_dozeAfterScreenOff is config_dozeAfterScreenOffByDefault now.
+e889d3f s2: Prefix AID with VENDOR_
+5043380 s2: Remove dead overlays for carrier IMS
+695e744 s2: Remove oem_2901 group for second RIL daemon service
+d1a66d4 s2: Remove config_tether_upstream_types overlay
+ae49247 s2: Adding the execute permission for /data/vendor/wifi
+a957b68 s2: Remove creation of /data/misc/wifi and /data/misc/dhcp
+bf642b3 s2: configstore: Uprev configstore (1.0 -> 1.1)
+35caf6a s2: Set TARGET_2ND_ARCH_VARIANT to armv8-a
+9126f24 s2: Add hostapd HIDL interface
+ff13771 s2: Uprev to supplicant 1.1
+0261683 s2: Uprev Wi-Fi HAL to 1.2
+3b20f00 s2: wifi_supplicant: deprecate entropy.bin
+45cb839 s2: Don't start supplicant with interfaces
+a43fda8 s2: wpa_supplicant(hidl): Add support for starting HAL lazily
+7a94757 s2: wpa_supplicant: Move control sockets to /data/vendor
+9156402 s2: Fix shared vdex name
+4b5b962 s2: rootdir: Set sys.usb.ffs.aio_compat
+f045b13 s2: Fix build of our bluetooth header
+68ee087 s2: doze: Set LOCAL_PRIVATE_PLATFORM_APIS
+4e53f98 s2: Consider lineage_s2 product via the AOSP way
+45df78b s2: Increase media volume steps to 25
+17d0786 s2: Drop custom healthd
+4a7bab1 s2: Re-enable soundtrigger * add soundtrigger configs
+0aec905 s2: Disable fluence for speaker and audiorec
+1c3a64e s2: build separate system and vendor hidl libs
+
