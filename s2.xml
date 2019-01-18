@@ -2,11 +2,11 @@
 <SlimOTA xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="ota.xsd">
     <Official>
         <s2>
-            <Filename>10.0.4-20190111-OFFICIAL-s2.zip</Filename>
+            <Filename>10.0.4-20190118-OFFICIAL-s2.zip</Filename>
             <RomUrl
                 id="rom"
                 title="LiquidRemix"
-                description="Download latest build for s2">https://sourceforge.net/projects/liquid-remix/files/s2/liquid_remix-10.0.4-20190111-OFFICIAL-s2.zip/download</RomUrl>
+                description="Download latest build for s2">https://sourceforge.net/projects/liquid-remix/files/s2/liquid_remix-10.0.4-20190118-OFFICIAL-s2.zip/download</RomUrl>
                 id="changelog"
             <ChangelogUrl
                 title="Changelog"

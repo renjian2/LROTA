@@ -1,10 +1,345 @@
 =======================
-     01-11-2019
+     01-18-2019
 =======================
 
 
-   * hardware/qcom/display-caf/msm8952/
-a4d1b53 display: Replace %zd with %ld for ssize_t argument
+   * device/leeco/s2/
+5fc45ce s2: Enable HEVC encoder
+f6328ac s2: rootdir: Introduce 'SafailNet'
+d31d509 s2: Enable Smooth Streaming for secure video playback
+cc4f90a s2: fingerprint: keep in system-background
+b8d9c38 s2: doze: Match Pie settings UI
+16dee2a s2: Use local DATA_IPACFG_MGR
+99443cd s2: rootdir: clean-up & update
+
+   * frameworks/opt/net/wifi/
+ca3fe7c Merge pull request #1 from rashedsahaji/liquid
+
+   * hardware/qcom/audio-caf/msm8952/
+87e2703 audio: Use normal tinycompress
+
+   * kernel/leeco/msm8976/
+4a7dd4f cpufreq: unlock when failing cpufreq_update_policy()
+5bc5edf cpufreq: Skip current frequency initialization for ->setpolicy 
+drivers
+4d35f34 cgroup: fix spurious lockdep warning in cgroup_exit()
+6cd1ee6 cgroup: fix deadlock on cgroup_mutex via 
+drop_parsed_module_refcounts()
+8968d2f cgroup: clean up the cftype array for the base cgroup files
+aebfc64 cgroup: mark "notify_on_release" and "release_agent" cgroup 
+files insane
+c2d755c cgroup: mark "tasks" cgroup file as insane
+677c3a9 cpufreq: remove unused notifier: 
+CPUFREQ_{SUSPENDCHANGE|RESUMECHANGE}
+616c522 cpufreq: Restore policy min/max limits on CPU online
+858ea66 cpufreq: Do not allow ->setpolicy drivers to provide ->target
+632200a cpufreq: allow driver-specific data
+37590a1 cpufreq: preserve user_policy across suspend/resume
+415ed4c cpufreq: Clean up after a failing light-weight initialization
+1003e10 cpufreq: use memcpy() to copy policy
+9daae2e cpufreq: move policy kobj to policy->cpu at resume
+b22df1c cpufreq:governor: Fix negative idle_time with CONFIG_HZ_PERIODIC
+6cf6284 cpufreq: Fix checkpatch errors and warnings
+6669f40 cpufreq: Refactor cpufreq_set_policy()
+8eea52d camera: Add clk_csi2_clk_src to CPP node
+c860fbb Merge remote-tracking branch 'f2fs/linux-3.10.y' into 
+lineage-16.0
+04ee238 last_kmsg: Import leeco changes from IIXOSOP5801607291S
+16befc1 config: disable modules
+af0c538 fix f2fs compile
+5afcc23 config: enable f2fs * regen defconfig
+9976396 drivers: power: import leeco changes from IIXOSOP5801607291S
+95d88d7 lpm-levels: Change _WARN_printf to pr_err when residency < 0
+2a67ba3 wlan: increase MAX_CFG_INI_ITEMS
+12fd053 camera: Add stub regulators for camera's gdscr.
+8487a00 camera: msm8976-camera: Add camss_top_ahb_clk_src to CPP node
+45fa87a power: qcom: pm-boot: Change WARN to pr_warn to avoid stack dump
+bc77dc3 BACKPORT: compat: wire up getrandom syscall for aarch32
+9d7a990 sound/core/rawmidi.c: silence -Wuninitialized error
+df904b6 Werror: fix invalid if statement
+d5ded6a cpufreq: fallback to interactive if governor is not found
+ca2d5c4 uapi: Define __BITS_PER_LONG based on compiler target
+5974814 dts: fix LPM parameters
+a504c30 input: misc: goodix_fp: Fix warning of unbalanced irq
+6f5c2d1 defconfig: replace broken CONFIG_SUSPEND_TIME with 
+CONFIG_PM_DEBUG
+511fd1f irqchip: gic: add calls to wakeup_reason
+cde46ac irqchip: msm: log wakeup interrupts
+752a0e3 USB: f_fs: change wait as freezable
+31ebbbf defconfig: enable eventpoll wakeup source debugging
+d1f62e8 fs: support debug of eventpoll wakeup source
+1920701 Add /proc/pid/smaps_rollup
+80120fc defconfig: Enable BFQ io scheduler and mark it as default 
+scheduler.
+219a2bf block: cgroups, kconfig, build bits for BFQ-v7r8-3.10.8+
+3586590 block, bfq: add Early Queue Merge (EQM) to BFQ-v7r8 for 3.10.8+
+18f1022 block: introduce the BFQ-v7r8 I/O sched for 3.10.8+
+945670b drivers: soc: qcom: system_stats: Support for System stats
+de2fc0c ASoC: core: Don't assign an out-of-bounds address to rtd_aux
+4c82017 s2/defconfig: Regen defconfig
+ff6d581 fs: sdfat: Add MODULE_ALIAS_FS for supported filesystems
+23c2526 fs: sdfat: Add config option to register sdFAT for VFAT
+762f846 fs: sdfat: Add config option to register sdFAT for exFAT
+d7b2e22 ARM64: configs: Enable support for sdFAT filesystem
+5d56180 fs: sdfat: Update to driver version 2.0.6
+47b8156 fs: sdfat: Fix compilation without debugging
+225fd18 fs: Import sdFAT driver
+9645dec ext4: add more inode number paranoia checks
+401d56f ext4: avoid running out of journal credits when appending to an 
+inline file
+395c74f ext4: add corruption check in ext4_xattr_set_entry()
+e8da732 ext4: standardize error handling in 
+ext4_da_write_inline_data_begin()
+5e1943c ext4: delete "set but not used" variables
+b0c91e8 ext4: retry allocation when inline->extent conversion failed
+e196a5f ext4: clear i_data in ext4_inode_info when removing inline data
+c4aa95b ext4: never move the system.data xattr out of the inode body
+41bcaef ext4: always verify the magic number in xattr blocks
+77dc2a4 ext4: verify the depth of extent tree in ext4_find_extent()
+be72610 ext4: fix bitmap position validation
+ee0d468 ext4: add validity checks for bitmap block numbers
+7d0b8cb ext4: fix block bitmap validation when bigalloc, ^flex_bg
+ed8269a ext4: fail ext4_iget for root directory if unallocated
+33a38cb netfilter: ebtables: CONFIG_COMPAT: don't trust userland offsets
+c83d6cc msm: vidc: Addition of enums for HLG and HDR10
+3f5a7ee jbd2: don't mark block as modified if the handle is out of 
+credits
+c22770f loop: fix concurrent lo_open/lo_release
+5760ac3 sysrq: Emergency Remount R/O in reverse order
+bdabeeb ANDROID: sdcardfs: fix potential crash when reserved_mb is not 
+zero
+28f53f0 ANDROID: sdcardfs: Don't d_drop in d_revalidate
+e201902 ANDROID: sdcardfs: Set s_root to NULL after putting
+a35d5a7 ANDROID: sdcardfs: d_make_root calls iput
+11af49b ANDROID: sdcardfs: Check for private data earlier
+10834cf ANDROID: sdcardfs: Fix sdcardfs to stop creating cases-sensitive 
+duplicate entries.
+cd57a24 ANDROID: sdcardfs: Set num in extension_details during make_item
+810cb0f ANDROID: sdcardfs: Protect set_top
+7d1a26b ANDROID: sdcardfs: Use lower getattr times/size
+b7179e5 ANDROID: xattr: Pass EOPNOTSUPP to permission2
+6a9feb61 ANDROID: sdcardfs: Move default_normal to superblock
+0d31008 ANDROID: sdcardfs: Fix missing break on default_normal
+1a566b8 ANDROID: sdcardfs: Add default_normal option
+3f9fbb6 sdcardfs: fix space leak
+489e844 BACKPORT: msm: mdss: Fix invalid dma attachment during fb 
+shutdown
+7b6ab0e USB: core: prevent malicious bNumInterfaces overflow
+24275c0 alarmtimer: Prevent overflow for relative nanosleep
+49d5bdf rndis_wlan: potential buffer overflow in 
+rndis_wlan_auth_indication()
+f3c08de mac80211: fix setting IEEE80211_KEY_FLAG_RX_MGMT for AP mode 
+keys
+51bf4b8 msm: mdss: Fix for wrong length in copy_to_user
+924c795 msm: mdss: check buffer size before writing to user buffer
+326feee net: ipc_router: Fix buffer overflow during memcpy
+c3441a0 BACKPORT: msm: rmnet_ipa: do not release resource on pending 
+data
+69d82ae packet: hold bind lock when rebinding to fanout hook
+ae79722 packet: in packet_do_bind, test fanout with bind_lock held
+e636f32 ANDROID: qtaguid: Fix the UAF problem with tag_ref_tree
+b0f7d0b iovec: make sure the caller actually wants anything in 
+memcpy_fromiovecend
+b7e624a - Information disclosure vulnerability CVE-2015-8956
+433216c msm: ipa: Fix for missing int overflow check in the refcount 
+library
+e5d772e uapi: Export sockaddr_storage for userspace
+67fa635 msm: camera: sensor: Fix memory leaks when sensor probe fails
+18660ba kernel: Fix massive cpufreq stats memory leaks
+31860dd cpufreq: Introduce new relation for freq selection
+0361333 msm: mdss: Don't constantly fire interrupts for DSI status check
+43905df zram: default compressor lz4
+ca14c77 lib: lz4: cleanup unaligned access efficiency detection
+19a9163 lib: lz4: fixed zram with lz4 on big endian machines
+1bac6a3 lz4: fix system halt at boot kernel on x86_64
+1bd408e lib/lz4: Pull out constant tables
+5bc6403 LZ4 : fix the data abort issue
+bf9ed93 lib: lz4: Set ARM_EFFICIENT_UNALIGNED_ACCESS
+28ba2dc lz4: add overrun checks to lz4_uncompress_unknownoutputsize()
+d030ac6 block: Reserve only one queue tag for sync IO if only 3 tags are 
+available
+2d2b05d readahead: make context readahead more conservative
+5ffb15d writeback: fix race that cause writeback hung
+3c5926b ext4: Speedup WB_SYNC_ALL pass called from sync(2)
+b8e43f9 tcp: enable sockets to use MSG_FASTOPEN by default
+8bdc1ad tcp_cubic: do not set epoch_start in the future
+2cb6eb25 tcp_cubic: better follow cubic curve after idle period
+4dd4990 tcp: fix timing issue in CUBIC slope calculation
+4033d32 writeback: fix occasional slow sync
+42d9554 Disable CPU L2 cache PC during video sessions
+7dd0f53 binfmt_elf.c: use get_random_int() to fix entropy depleting
+
+   * vendor/liquid/
+8c699b6 Move custom hwui and dalvik prop files to vendor
+a21736b qcom: Mark some gralloc bits as valid
+
+=======================
+     01-17-2019
+=======================
+
+
+   * kernel/leeco/msm8976/
+2bb88cf Merge remote-tracking branch 'f2fs/linux-3.10.y' into 
+lineage-16.0
+
+=======================
+     01-16-2019
+=======================
+
+
+   * bionic/
+7cfff4b libc fortify: Ignore open() O_TMPFILE mode bits warning
+
+   * kernel/leeco/msm8976/
+60154e3 drivers: power: import leeco changes from IIXOSOP5801607291S
+f5f5f99 lpm-levels: Change _WARN_printf to pr_err when residency < 0
+204c314 wlan: increase MAX_CFG_INI_ITEMS
+8086a0f camera: Add stub regulators for camera's gdscr.
+a86d602 camera: msm8976-camera: Add camss_top_ahb_clk_src to CPP node
+627de35 power: qcom: pm-boot: Change WARN to pr_warn to avoid stack dump
+55e6abe BACKPORT: compat: wire up getrandom syscall for aarch32
+69b2de9 sound/core/rawmidi.c: silence -Wuninitialized error
+5a38483 Werror: fix invalid if statement
+bceb8fd cpufreq: fallback to interactive if governor is not found
+20ae0d4 uapi: Define __BITS_PER_LONG based on compiler target
+4c5215e dts: fix LPM parameters
+f00a24d input: misc: goodix_fp: Fix warning of unbalanced irq
+1977061 defconfig: replace broken CONFIG_SUSPEND_TIME with 
+CONFIG_PM_DEBUG
+c63bb1f irqchip: gic: add calls to wakeup_reason
+4da2bbd irqchip: msm: log wakeup interrupts
+9a987b0 USB: f_fs: change wait as freezable
+95fda3a defconfig: enable eventpoll wakeup source debugging
+b5f4890 fs: support debug of eventpoll wakeup source
+90731a4 Add /proc/pid/smaps_rollup
+8bcb9e8 defconfig: Enable BFQ io scheduler and mark it as default 
+scheduler.
+dab62d1 block: cgroups, kconfig, build bits for BFQ-v7r8-3.10.8+
+5457dea block, bfq: add Early Queue Merge (EQM) to BFQ-v7r8 for 3.10.8+
+8ff8ace block: introduce the BFQ-v7r8 I/O sched for 3.10.8+
+ee992c1 drivers: soc: qcom: system_stats: Support for System stats
+badeb7f ASoC: core: Don't assign an out-of-bounds address to rtd_aux
+84ee465 rmnet_ipa: Fix netdev watchdog triggering on suspend
+5f11b2f s2/defconfig: Regen defconfig
+3b124b1 fs: sdfat: Add MODULE_ALIAS_FS for supported filesystems
+da781ed fs: sdfat: Add config option to register sdFAT for VFAT
+7980197 fs: sdfat: Add config option to register sdFAT for exFAT
+01d4394 ARM64: configs: Enable support for sdFAT filesystem
+b5ce210 fs: sdfat: Update to driver version 2.0.6
+6ef38db fs: sdfat: Fix compilation without debugging
+4a43f79 fs: Import sdFAT driver
+78a490a ext4: add more inode number paranoia checks
+4f9e3a4 ext4: avoid running out of journal credits when appending to an 
+inline file
+7ceb66b ext4: add corruption check in ext4_xattr_set_entry()
+d3cd1c7 ext4: standardize error handling in 
+ext4_da_write_inline_data_begin()
+a723de9 ext4: delete "set but not used" variables
+d35d270 ext4: retry allocation when inline->extent conversion failed
+742be6b ext4: clear i_data in ext4_inode_info when removing inline data
+5129465 ext4: never move the system.data xattr out of the inode body
+fbf915f ext4: always verify the magic number in xattr blocks
+8b47886 ext4: verify the depth of extent tree in ext4_find_extent()
+8a7785f ext4: fix bitmap position validation
+3a0bf0c ext4: add validity checks for bitmap block numbers
+f1db21b ext4: fix block bitmap validation when bigalloc, ^flex_bg
+0f78a43 ext4: fail ext4_iget for root directory if unallocated
+67380b2 netfilter: ebtables: CONFIG_COMPAT: don't trust userland offsets
+557db28 msm: vidc: Addition of enums for HLG and HDR10
+23daf6a jbd2: don't mark block as modified if the handle is out of 
+credits
+46ad4f1 loop: fix concurrent lo_open/lo_release
+7f0c4ee sysrq: Emergency Remount R/O in reverse order
+cffe696 ANDROID: sdcardfs: fix potential crash when reserved_mb is not 
+zero
+66e21b5 ANDROID: sdcardfs: Don't d_drop in d_revalidate
+067f14f ANDROID: sdcardfs: Set s_root to NULL after putting
+8f12a45 ANDROID: sdcardfs: d_make_root calls iput
+e3e08c7 ANDROID: sdcardfs: Check for private data earlier
+8a07502 ANDROID: sdcardfs: Fix sdcardfs to stop creating cases-sensitive 
+duplicate entries.
+ac6003d ANDROID: sdcardfs: Set num in extension_details during make_item
+022f82e ANDROID: sdcardfs: Protect set_top
+6f767a3 ANDROID: sdcardfs: Use lower getattr times/size
+b66e216 ANDROID: xattr: Pass EOPNOTSUPP to permission2
+4dc0075 ANDROID: sdcardfs: Move default_normal to superblock
+15e25d5 ANDROID: sdcardfs: Fix missing break on default_normal
+30c7b73 ANDROID: sdcardfs: Add default_normal option
+b287fb3 sdcardfs: fix space leak
+663d7fa BACKPORT: msm: mdss: Fix invalid dma attachment during fb 
+shutdown
+579c286 USB: core: prevent malicious bNumInterfaces overflow
+e67b7b0 alarmtimer: Prevent overflow for relative nanosleep
+f6e5690 rndis_wlan: potential buffer overflow in 
+rndis_wlan_auth_indication()
+46988a7 mac80211: fix setting IEEE80211_KEY_FLAG_RX_MGMT for AP mode 
+keys
+17d7c80 msm: mdss: Fix for wrong length in copy_to_user
+8a71fb0 msm: mdss: check buffer size before writing to user buffer
+0407c33 net: ipc_router: Fix buffer overflow during memcpy
+f1cb57b BACKPORT: msm: rmnet_ipa: do not release resource on pending 
+data
+d19ddbc packet: hold bind lock when rebinding to fanout hook
+7a516ae packet: in packet_do_bind, test fanout with bind_lock held
+8e576ce ANDROID: qtaguid: Fix the UAF problem with tag_ref_tree
+2e5532a iovec: make sure the caller actually wants anything in 
+memcpy_fromiovecend
+458f960 - Information disclosure vulnerability CVE-2015-8956
+5a31f6c msm: ipa: Fix for missing int overflow check in the refcount 
+library
+b094d60 uapi: Export sockaddr_storage for userspace
+2930cbc msm: camera: sensor: Fix memory leaks when sensor probe fails
+afcb4f6 kernel: Fix massive cpufreq stats memory leaks
+06ec68e cpufreq: Introduce new relation for freq selection
+cce41d9 msm: mdss: Don't constantly fire interrupts for DSI status check
+4d86d83 zram: default compressor lz4
+4d3d3fc lib: lz4: cleanup unaligned access efficiency detection
+cf3acde lib: lz4: fixed zram with lz4 on big endian machines
+7f10688 lz4: fix system halt at boot kernel on x86_64
+5e2ed1f lib/lz4: Pull out constant tables
+d3ee3c9 LZ4 : fix the data abort issue
+5c0eb57 lib: lz4: Set ARM_EFFICIENT_UNALIGNED_ACCESS
+add9043 lz4: add overrun checks to lz4_uncompress_unknownoutputsize()
+df6b382 block: Reserve only one queue tag for sync IO if only 3 tags are 
+available
+8835ccf readahead: make context readahead more conservative
+9a778a6 writeback: fix race that cause writeback hung
+6ea6101 ext4: Speedup WB_SYNC_ALL pass called from sync(2)
+b4fd9d0 tcp: enable sockets to use MSG_FASTOPEN by default
+7936cd3 tcp_cubic: do not set epoch_start in the future
+7a3483e tcp_cubic: better follow cubic curve after idle period
+4ca9660 tcp: fix timing issue in CUBIC slope calculation
+7a54cd3 writeback: fix occasional slow sync
+63addc6 Disable CPU L2 cache PC during video sessions
+623f9c8 binfmt_elf.c: use get_random_int() to fix entropy depleting
+
+=======================
+     01-15-2019
+=======================
+
+
+   * frameworks/opt/net/wifi/
+b246c98 WiFi: Ignore connectivity scans during WFD session
+
+=======================
+     01-14-2019
+=======================
+
+
+=======================
+     01-13-2019
+=======================
+
+
+=======================
+     01-12-2019
+=======================
+
+
+=======================
+     01-11-2019
+=======================
+
 
 =======================
      01-10-2019
@@ -14,11 +349,13 @@ a4d1b53 display: Replace %zd with %ld for ssize_t argument
    * bootable/recovery/
 d405c57 Add runtime checks for A/B vs traditional updates
 8d894c6 Make adb use a custom prop for adb root
-5412e6d update_verifier: skip verity to determine successful on liquid builds
+5412e6d update_verifier: skip verity to determine successful on liquid 
+builds
 0b18fcc recovery: updater: Fix SymlinkFn args
 277cbeb uncrypt: fix f2fs ioctl argument for pin_file
 7db24c1 f2fs: support f2fs by setting unmovable bit for package file
-41976d4 Revert "f2fs: support f2fs by setting unmovable bit for package file"
+41976d4 Revert "f2fs: support f2fs by setting unmovable bit for package 
+file"
 
    * build/make/
 328d602 Merge tag 'android-9.0.0_r30' into pie
@@ -71,12 +408,16 @@ f7f54d5 s2: Make brightness ramp rates multiples of 60.
 364ce77 s2: Update rootdir
 5ca2f24 s2: Add QPerformance and UxPerformance to pinner service
 9a28ddd s2: overlay: Remove pinning of SystemUI
-b29c9cc s2: Wifi: Set tdls_external_control to configure external control mode.
+b29c9cc s2: Wifi: Set tdls_external_control to configure external 
+control mode.
 90b9d55 s2: Enable UxExperience IOPrefetcher
-b75c037 s2: Adapt perf configs to msm8952/56/76 * Remove references of other soc's * Adjust min cpu freq * Move perfboost mode from schedutil to interactive * Disable non-existent sysfs/procfs nodes
+b75c037 s2: Adapt perf configs to msm8952/56/76 * Remove references of 
+other soc's * Adjust min cpu freq * Move perfboost mode from schedutil 
+to interactive * Disable non-existent sysfs/procfs nodes
 8ee9ec1 s2: add modified perf profiles
 9a52baa s2: update perf stack from Mi A2 Lite (Daisy)
-4953bed s2: audio: Enable stereo speakers * Use ear piece as secondary speaker * Increase default volume levels
+4953bed s2: audio: Enable stereo speakers * Use ear piece as secondary 
+speaker * Increase default volume levels
 2d151a7 s2: overlay: Kang marlin brightness configuration
 beb4d69 Revert "s2: add WFD blobs"
 c7cbc0c Revert "s2: wfd: adding entry for vendor interface"
@@ -89,417 +430,4 @@ b2cf0bd Revert "s2: build libnl"
    * device/qcom/sepolicy/
 a8d664b sepolicy: allow vold to read persist dirs
 84d55e5 sepolicy: Label mpctl_socket as data_file_type
-
-=======================
-     01-08-2019
-=======================
-
-
-   * frameworks/base/
-c651dfb [1/2] Ambient Visualizer
-a40a1a7 Always use standard small clock when pulsing on new notifications
-a903529 Ambient ticker: Set the text to fully white
-6262e37 base: fix signature spoofing and microg
-c689266 Display 'Dash charging' for dash charge in battery settings [1/2]
-b4f58a5 Ambient Display Music Ticker: Nuke song count info
-f13544b Ambient music / Now playing: show also on lockscreen
-ecb3f53 Ambient music: check if isMediaNotification after final inflation
-9d143c3 Ambient music ticker: make it work within Now Playing on Pixel devices [1/2]
-c453143 Full gesture navbar: fix swipe to back glitches
-b6464dc NFC tile: Make inactive drawable match other tiles
-cc44b29 Auto switch to a dark analog clock when using dark system theme
-1a162e1 Lockscreen clock styles: Fix bottom margins & ambient display/AOD visibility
-a1222b6 Lockscreen items/clocks: KeyguardSliceView improvements/cleanup
-d828e4a Lockscreen clock styles: Move everything to the keyguard [1/2]
-b19de35 Lockscreen/ambient analog clock: improve design
-c5e06e8 Ensure the clockview is aligned correctly each time
-f517d7c Remove the 0 from the 12 hour format from the 'Digital (bold)' option
-58e9751 Keyguard items: code improvements
-7d8c5d8 Introduce lockscreen clock/date styles [1/2]
-
-   * hardware/lineage/interfaces/
-7a01f1f livedisplay: Update FOSS status prop for Pie
-
-   * hardware/qcom/audio/default/
-dd4e0ad Merge tag 'android-9.0.0_r30' into lineage-16.0-android-9.0.0_r30
-
-   * packages/apps/LiquidLounge/
-59ebe1c lounge: cleanup and organize gesture settings
-1f76c34 [2/2] Ambient Visualizer
-
-=======================
-     01-07-2019
-=======================
-
-
-   * device/leeco/s2/
-c29eebb s2: Add support for vp9 decoding
-
-   * frameworks/base/
-878bf8d Always keep clock/date & other items visible while dozing
-d9784af Hide lockscreen items [1/2]
-8a9134e Fix liquid logo overlap with clock
-c04e3d5 Fix system ui crash when pinning screen
-6568283 systemui: fixed advanced power menu option
-d8b9de6 PowerProfile: allow overriding default power profile
-54e4fea Enable Binder Proxy Tracking by Uid only on eng builds
-124f679 base: make settings_dark colors same as material_dark
-c014cab Brightness QS: more user options
-50785a7 Revert "Brightness slider changes"
-af3b43d Revert "Cleanup brightness slider toggle [1/2]"
-54bbc2d Network traffic: fix indicator not hiding on lost connection
-3b31940 Add button to AppErrorDialog to upload crash information to dogbin
-0e8d11b core: Fix switching fragment appears white screen
-5d127d7 SystemUI: Keyguard: Check for a null errString
-962874c Proximity check on wake fixes
-02cdac3 MTP: Add support of ObjectInfoChanged Event
-e6ec653 Revert "Change the listening logic of MtpStorageManager"
-9049e71 AMS: Fix the null pointer exception in MainHandler:handleMessage
-b072e2b AMS: Uncatch the IllegalStateException cause process crash
-8b02cd0 AMS: Fix the Deadlocks exception in UiHandler
-700cd4a AMS: Fix the null pointer exception in IntentResolver
-c3d658f hiddenapi: add crc32 intrinsic methods to light-greylist
-
-   * kernel/leeco/msm8976/
-4bbfb2b ANDROID: uid_sys_stats: fix the comment
-d9882f4 uid_sys_stats: fix overflow when io usage delta is negative
-0826046 sched/cpuset/pm: Fix cpuset vs. suspend-resume bugs
-d2ccd50 cpuset: drop "const" qualifiers from struct cpuset instances
-7b476ad cpuset: Fix potential deadlock w/ set_mems_allowed
-0bd0b53 cpuset: fix a regression in validating config change
-03bc69e cpuset: remove an unncessary forward declaration
-467fb28 cpuset: relocate a misplaced comment
-7b458be cpuset: fix a locking issue in cpuset_migrate_mm()
-51f8ebb cpuset: rename @cont to @cgrp
-36bf428 cpuset: fix to migrate mm correctly in a corner case
-80efbed cpuset: allow to move tasks to empty cpusets
-a153cd0 cpuset: allow to keep tasks in empty cpusets
-0631e58 cpuset: introduce effective_{cpumask|nodemask}_cpuset()
-b62329a cpuset: record old_mems_allowed in struct cpuset
-5fb80e2 cpuset: remove async hotplug propagation work
-c3f418e cpuset: let hotplug propagation work wait for task attaching
-718b13e cpuset: get rid of the useless forward declaration of cpuset
-f73745d cpuset: remove unnecessary variable in cpuset_attach()
-543f97b cpuset: cleanup guarantee_online_{cpus|mems}()
-69ae64c cpuset: remove redundant check in cpuset_cpus_allowed_fallback()
-d5522ce cpuset: re-structure update_cpumask() a bit
-a2a971b cpuset: remove cpuset_test_cpumask()
-ea05db7 proc: much faster /proc/vmstat
-62e98c5 ext[34]: fix double put in tmpfile
-ce0545a ext3: fix a BUG when opening a file with O_TMPFILE flag
-2582fa2 ext4: fix a BUG when opening a file with O_TMPFILE flag
-1822be4 ext4: ->tmpfile() support
-651fd18fe ext3 ->tmpfile() support
-ca1ae52 fs: allow open(dir, O_TMPFILE|..., 0) with mode 0
-a9fe3d0 vfs: add missing check for __O_TMPFILE in fcntl_init()
-0e2502b fs: Fix file mode for O_TMPFILE
-70dd734 allow O_TMPFILE to work with O_WRONLY
-f74c315 Safer ABI for O_TMPFILE
-0b37fe4 allow the temp files created by open() to be linked to
-4f26ff6 [O_TMPFILE] it's still short a few helpers, but infrastructure should be OK now...
-bb63efb msm8976: Update defconfig
-000e975 power: qpnp-smbcharger: Fix the BMD algo. disable logic
-0f96dfa drivers:power: Fix the soc update delay
-cefb2c5 fix qpnp_fg_cap_learning wake lock no release
-fd21bb8 power: qpnp-fg: Coulomb Counting Error
-43d590f DTS: Fix Qualcomm Typo Error
-ceab6ec mobicore: Fix section mismatch
-e8b6463 net: rmnet_data: Silence "Unkown IOCTL" log spam
-706bfba BACKPORT: fs: limit filesystem stacking depth
-f962af9 USB: f_fs: change wait as freezable
-08c12cb power: make sync on suspend optional On embedded devices with built-in batteries, it is not so important to sync the file systems before suspend.  The chance of losing power during suspend are no greater than they are when the system is awake.  The sync operations can greatly increase suspend latency when the system has accrued many dirty pages and/or the target storage devices are not particularly fast.
-5f70aee sched/loadavg: Fix loadavg artifacts on fully idle and on fully loaded systems
-ef4c094 arm: dts: msm8976-cpu: Add clock-frequency property to CPU nodes patch taken from:- https://patchwork.kernel.org/patch/9276177/ fixes the following warning during bootup /cpus/cpu@0: Missing clock-frequency property /cpus/cpu@1: Missing clock-frequency property /cpus/cpu@2: Missing clock-frequency property /cpus/cpu@3: Missing clock-frequency property /cpus/cpu@100: Missing clock-frequency property /cpus/cpu@101: Missing clock-frequency property
-4529297 locking: Remove atomicy checks from {READ,WRITE}_ONCE
-5bae89c kernel: make READ_ONCE() valid on const arguments
-82dac66 kernel: Change ASSIGN_ONCE(val, x) to WRITE_ONCE(x, val)
-a087e6e kernel: Provide READ_ONCE and ASSIGN_ONCE
-0b9db56 ANDROID: cpufreq: stats: add uid removal for uid_time_in_state
-dc95a84 ANDROID: cpufreq_stats: Fix task time in state locking
-c0bcf7e ANDROID: cpufreq_stat: add per task/uid/freq stats
-d070ba4 Revert "ANDROID: uid_cputime: add per-uid IO usage accounting"
-866ced7 Revert "ANDROID: uid_sys_stats: rename uid_cputime.c to uid_sys_stats.c"
-e046220 Revert "ANDROID: uid_sys_stats: allow writing same state"
-67ae77a Revert "ANDROID: uid_sys_stats: return full size when state is not changed."
-3522010 Revert "ANDROID: uid_sys_stats: remove unnecessary code in procstat switch"
-27fcc6b Revert "ANDROID: uid_sys_stats: fix negative write bytes."
-59d3377 Revert "ANDROID: uid_sys_stats: account for fsync syscalls"
-a4874d4 Revert "uid_sys_stats: change to use rt_mutex"
-aff687c Revert "ANDROID: uid_sys_stats: fix typo in init"
-9dbf910 Revert "uid_sys_stats: reduce update_io_stats overhead"
-21758c3 Revert "ANDROID: uid_sys_stats: fix access of task_uid(task)"
-5f3a677 Revert "uid_sys_stats: defer io stats calulation for dead tasks"
-54e1558 Revert "uid_sys_stats: fix overflow when io usage delta is negative"
-301e348 Revert "ANDROID: uid_sys_stats: fix the comment"
-88ba740 Revert "ANDROID: cpufreq_stat: add per task/uid/freq stats"
-0839ab9 Revert "ANDROID: cpufreq_stats: Fix task time in state locking"
-ddf5a90 Revert "ANDROID: sdcardfs: Don't use OVERRIDE_CRED macro"
-7dfd62b Revert "ANDROID: sdcardfs: Change current->fs under lock"
-6c884be Revert "locking: Remove atomicy checks from {READ,WRITE}_ONCE"
-4b4df04 Revert "ANDROID: cpufreq: stats: add uid removal for uid_time_in_state"
-29638d9 Revert "regenerate defconfig"
-d4491c5 Revert "ANDROID: mm: add config for default readahead size"
-
-   * packages/apps/LiquidLounge/
-848c54f Introduce lockscreen clock/date styles [2/2]
-14c6ec6 Hide lockscreen items [2/2]
-fef6dd1 Add mido maintainer Not added by default? I am hurt :-(
-e950fdf lounge: update weather client detection
-46fc021 Brightness QS: more user options
-
-   * packages/apps/Settings/
-bd675cb Display 'Dash charging' for dash charge in battery settings [2/2]
-
-   * system/update_engine/
-73e4f85 Android: Reset update progress when booted into new version.
-27ddc72 update_engine: Fallback to partition without suffix
-
-   * vendor/liquid/
-0d2bc6d Add AmbientSensePrebuilt: it's used also by Google app/SoundSearch tile
-
-=======================
-     01-06-2019
-=======================
-
-
-   * device/qcom/sepolicy-legacy/
-d1f4846 sepolicy: Add additional restricted permissions to vendor_init
-
-   * frameworks/base/
-efba87c StatusBar: corners: Fix dp evaluation
-015e9d7 ScreenDecorations: corners: Fixes for pie
-0a62cae StatusBar: Port in restore fw values to corner settings
-96a7667 Weather client: switch to vector drawables
-ea8199b Weather client: fix refresh at boot and improve/cleanup code [1/2]
-c35e6d4 base: Switch styles [1/3]
-779a72b base: Add OOS style switches
-6d5da90 base: QS themes [1/3]
-4396298 Ambient music ticker: don't trigger if it's not a media notification
-b11e614 Network traffic location [1/2]
-5945045 Network traffic: Fix text size for network traffic type
-0136866 Network traffic: Layout improvements
-6096010 Network traffic: fix static color usage
-330c748 Move net monitor to expanded statusbar header
-6b6ecd1 NetworkTraffic: Fix gravity
-ab1bb93 Avoid casting network traffic to StatusBarIconView to prevent crash
-a292325 Add network traffic monitor properly to statusbar icons
-764bd25 WeatherClient: don't check package availability on each location query
-ed2cb18 FontService: Disable logspam
-dbc87ed fonts: Build different fonts.xml if EXCLUDE_SERIF_FONTS is true
-d0cddca Systemui restart timeout causes black screen
-811ddfd Move register AppIdle listener into onBootPhase
-caceb3c Fix VideoView parsing some URIs failure issue
-1b189b9 InputEvent: Skip IME stages dynamically
-8d95177 No Safe Check for Overflowing Alarm Expiry time
-db65375 ViewRoot: Ensure we release surface from setWindowStopped
-fb09332 Weather client check: set interval to 20 minutes
-b89fb1e systemui: fix quick settings transparency
-207566d SoundSearchTile: Make default state inactive
-cb1ab5f Add Google Sound Search tile
-d1d0ca6 Ambient music: Use animated icon
-f17ce22 Ambient display music ticker [1/2]
-41f17e9 Port Ambient Now Playing container from Pixel
-6adbd76 base: Disable screen saver by default
-8a4cf03 base: SystemUI: tuner: fix hiding of statusbar clock
-adf3e8b Allow user to set screenrecord quality [1/2]
-8a6e9c8 FontService: Support fonts from Substratum theme packages
-892d362 FontService: Don't copy resources from /system/etc/fonts
-12eca24 Switching audio panel position [1/2]
-bedf796 Revert "SystemUI: allow devices override audio panel location [1/2]"
-10b1427 SystemUI: Use different drawables for notification volume
-a04c918 Fix the tint of the sliders in volume panel
-dfc063f Battery light: blend colors between full/empty [1/2]
-67118d8 BatteryLight: Full Charge Only, Fast Charge & Fast Charge Led colors [1/2]
-
-   * packages/apps/LiquidLounge/
-e68f13d Network traffic location [2/2]
-82052a5 Quick settings panel : Set transparency [2/2]
-4e1415e Ambient display music ticker [2/2]
-021aa70 Add Default USB Configuration
-f76725a Allow user to set screenrecord quality [2/2]
-10b5851 Switching audio panel position [2/2]
-fd6fadd Batterylight: blend colors between full/empty [2/2]
-2693d59 Add ColorBlendPreference from AICP
-1f299cd BatteryLight: Fast Charge & Fast Charge Led colors [2/2]
-560e25c [2/2] Lounge: op gesture tweaks
-
-   * packages/apps/Settings/
-1f78ad2 settings: QS themes [2/3]
-8642d8f RoundCorners: Add fw values corner preferences
-c34d23b settings: Switch styles [2/3]
-101a2e2 Settings: Automatic notification style [2/2]
-500de91 Add OnePlus dashboard icons [2/2]
-f1fb805 Restart SystemUI after UI style change
-b425796 settings: UI Styles [1/3]
-05ee437 Settings: Fix crash due to volume unlink preference
-eb5f63d deviceinfo: Move imei information to Sim status
-6c4451f Settings: clean SimPrefrenceDialog layout
-6a3e330 Settings: fix neverending progress on sim activation change
-2c6b2b8 Settings: no need to show a success alert dialog on sim switch
-bd30e3c Settings: adjust layout of fingerprint find sensor layout
-c41e4bf Settings: Allow devices to configure fingerprint sensor location
-
-   * system/update_engine/
-fce3e0c update_engine: Transition to backuptool domain
-
-   * vendor/liquid/
-5b10db2 vendor: increase build number (10.0.4)
-
-=======================
-     01-05-2019
-=======================
-
-
-   * packages/apps/Settings/
-1d8dddc Add OnePlus dashboard icons [1/2]
-e0081cc Settings: Use MD2 icons for sliders to match the volume panel
-d7e9e33 Settings: Use correct icon for ring volume
-
-   * vendor/liquid/
-7ab3ed1 soong_config: Add flag for crypto waiting on QSEE to start
-dd4ff05 soong_config: Add flag for legacy HW FDE
-5d10dfa liquid: qcom: Set proper CAF data-ipa-cfg-mgr pathmap
-9ec6ab8 vendor: Switch styles [3/3]
-882a598 vendor: Black theme fixes
-760a976 vendor: QS themes [3/3]
-0e1a396 vendor: Add 20SEVEN font
-036ba40 vendor: Add GBoard MD2 themes
-23cb2ae vendor: Remove light notification theme
-5996d98 Add OnePlus settings icon colors
-e4660a0 vendor: UI Styles [3/3]
-6c1f08a vendor: remove wifi display property overrides
-543308c liquid: qcom: Set data-ipa-cfg-mgr pathmap
-0fc48c8 soong_config: Add new flags for HW FDE
-
-=======================
-     01-04-2019
-=======================
-
-
-   * build/make/
-70687bd libart: change first boot dexopt to extract
-b085150 build: Support system-as-root A-only backuptool
-
-   * external/icu/
-7f4db1f Update Android ICU tzdata from 2018g to 2018i
-
-   * frameworks/av/
-53e10f6 MTP: Add support of ObjectInfoChanged Event
-3a8c1d1 audiopolicy: support extended feature in audiopolicymanager
-1d25df1 libcameraservice: force specific cam id for google face unlock
-
-   * frameworks/base/
-16f7157 Fix no default ringtone for slot2
-fa58801 telephony: Conditionally ignore RSSNR signal level
-b64a591 Revert "Improve a calculation method for LTE antenna reception level"
-cd89767 Reload assets on overlay change: code improvements
-0439425 Fix autofill save text
-5cb7182 base: Automatic notification style [1/2]
-04fff8f base: UI Styles [1/3]
-04ef0a3 [1/2] base: op gesture tweaks
-eb060ed BoostFramework: Add debug to hide logcat spam on devices without QPerfomance
-2394fa3 Revert "Need to check empty not null for String"
-fe37028 Allow fingerprint in Pocket mode
-c3f40ab core: Use darker shades for grey
-ee91953 systemui: fix liquid logo settings observer
-f4d1772 Revert "Statusbar clock and icon fixes"
-e649135 SystemUI: allow the power menu to be relocated
-ce40c77 SystemUI: Fix wrong SIM PIN message
-1ba2b54 Network traffic: skip more useless handler calls
-bf07ead Statusbar net monitor: stop the handler if screen is off
-5144de7 frameworks: base: Port password retention feature
-c93242d ConsumerIR: Support Huawei's DSP chip implementation
-621b98d Binder: Fix improper JNI call for dumpProxyDebugInfo
-
-   * hardware/qcom/data/ipacfg-mgr/
-5d43e1a ipacfg-mgr: Use    * pathmap
-
-   * packages/apps/DocumentsUI/
-40522bf DocumentsUI: Squash 12 bug fixes taken from bug tracker
-523b0bc DocumentsUI: Remove obsolete LOCAL_JACK_FLAGS
-24a33da Update few drawables [2/2]
-4388cad DocumentsUI: adaptive icon
-28c717b DocumentsUI: define appcategory
-e045b0d DocumentsUI: Make dark mode look a little better
-1aa8dad Add Pixel UI
-38f518d DocumentsUI: support night mode
-5230e70 Fix duplicate permission info on Adoptable storage
-0ca0620 Fix layout of dropdown_sort_widget
-51ebc15 Fix the other app's scoped directory permissions are revoked
-7c183c5 Fix crash when opening inspector screen of broken folder
-48e88ec Drop the task which already stopped in restoreTask
-43ef724 DocumentsUI: Open /sdcard instead of Downloads by default
-6d0b3d8 Fix force close when deleting files
-
-   * packages/apps/SecureElement/
-405f182 mAid can't be set to null for default selected application (C000).
-
-   * packages/providers/WeatherProvider/
-1b6ab4f Weather client: fix refresh at boot and improve/cleanup code [2/2]
-c5d0013 Add gzip support
-336a655 Weather api: a few improvements
-
-   * packages/resources/devicesettings/
-5a824fe Add strings for Ambient Display always on mode
-
-   * system/bt/
-8cbd935 Bluetooth: Ensure to release wake lock during turn off
-
-   * system/timezone/
-74c40ac Update Android tzdata from 2018g to 2018i
-
-   * system/vold/
-f33fa5e vold: Move QCOM HW FDE inclusion under Lineage namespace
-599d58e system: vold: Remove crypto block device creation
-5ffe28c vold: Add Hardware FDE feature
-
-   * vendor/liquid/
-2aa037b liquid: Support system-as-root A-only backuptool
-
-   * vendor/qcom/opensource/cryptfs_hw/
-9ce3ae9 cryptfs_hw: Fix build warnings
-bb6dfec cryptfs_hw: Featurize support for waiting on QSEE to start
-83ec2af cryptfs_hw: Add compatibility for pre-O hw crypto
-
-=======================
-     01-03-2019
-=======================
-
-
-   * device/leeco/s2/
-51d3d0b s2: Add modified perf profiles
-
-   * hardware/interfaces/
-0d28934 Merge pull request #1 from rashedsahaji/p9.0
-
-   * hardware/lineage/interfaces/
-552a5f2 light: aw2013: Mark as shutdown critical
-
-   * hardware/qcom/audio-caf/msm8916/
-48ca4c0 post_proc: Mark unused variables as __unused
-
-   * hardware/qcom/fm/
-1b22089 Merge tag 'LA.UM.7.3.r1-06600-sdm845.0' into HEAD
-
-   * hardware/qcom/wlan-caf/
-ea63a8b Merge tag 'LA.UM.7.3.r1-06600-sdm845.0' into HEAD
-
-   * packages/apps/Launcher3/
-f0a32a9 Use LiquidUtils Fix compilation error
-6a715d2 Add Google search double tap option
-e4c80c1 Add Google ActionServices (MatchmakerPrebuilt) to blacklisted apps
-efa937d Fix Traslate pt-rBR
-988617f Add translation pt-rBR
-
-   * packages/apps/LiquidLounge/
-bec78e2 add submenu about, move OTA and matenedor [1/2]
-
-   * packages/apps/Settings/
-9ae6547 Make LiquidRemix Build version text follow system accent
-ad5e049 add submenu about, move OTA and matenedor [2/2]
-
-=======================
-     01-02-2019
-=======================
-
 
